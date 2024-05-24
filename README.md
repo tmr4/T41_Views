@@ -6,7 +6,9 @@ View and control code for a T41-EP Control App.
 
 ## Features
 
-The app communicates with the T41 over USB (SerialUSB1 on Teensy you must select `Dual` or `Triple` USB Type when compiling the [T41 software](https://github.com/tmr4/T41_SDR/tree/dev/v0.1). The control app has the following features:
+The app communicates with the T41 over USB (SerialUSB1 on Teensy; you must select `Dual` or `Triple` USB Type when compiling the [T41 software](https://github.com/tmr4/T41_SDR/tree/dev/v0.1)).
+
+The control app has the following features:
 
   * Live view of frequency and audio spectrums, S-meter, waterfall, and filter bandwidth
   * Live updates can be paused or started with the button at the lower left of the waterfall
@@ -16,7 +18,7 @@ The app communicates with the T41 over USB (SerialUSB1 on Teensy you must select
   * Zero out the 1000s portion of the active VFO with a right-mouse click
   * Reset tuning of the active VFO with a mouse click on the Center Frequency
   * Switch to the inactive VFO with a mouse click on the inactive VFO
-  * Set the noise floor with a mouse click on NF Set and a mouse wheel in the frequency spectrum (this occurs live unlike the base T41 software which stops operation while the noise floor is adjusted)
+  * Set the noise floor with a mouse click on NF Set and a mouse wheel (this occurs live unlike the base T41 software which stops operation while the noise floor is adjusted)
   * Change the following up or down with the mouse wheel (on the corresponding indicator):
     * Band
     * Operating mode
@@ -36,4 +38,4 @@ This is a work in progress and many T41 features are not available through the c
 
 My T41 software is required for the control app to function. The structure of the EEPROM is different from the original T41 software so a clean install is required.  Note that some T41 functionality may not work in my version probably because I made breaking changes and haven't tested things that don't interest me at the moment.  
 
-Unfortunately, a simple copy/paste ported to version V049.2 isn't possible.  While the main T41 USB serial code is in a single file, there are other changes to the T41 code, and I've made many changes to my version which I utilize here.  Still, if you're interested in the app and are familiar with the T41 software, porting this to version V049.2 shouldn't be too difficult.
+Unfortunately, a simple copy/paste port to version V049.2 isn't possible.  While the main T41 USB serial code is in a single file, there are other changes to the T41 code, and I've made many changes to my version which I utilize here.  Still, if you're interested in the app and are familiar with the T41 software, porting this to version V049.2 shouldn't be too difficult.
