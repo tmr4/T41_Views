@@ -6,7 +6,7 @@ View and control code for a T41-EP Control App.
 
 ## Features
 
-The app communicates with T41 over USB (SerialUSB1 on Teensy, must select `Dual` or `Triple` USB Type when compiling the [T41 software](https://github.com/tmr4/T41_SDR/tree/dev/v0.1). The control app has the following features:
+The app communicates with the T41 over USB (SerialUSB1 on Teensy you must select `Dual` or `Triple` USB Type when compiling the [T41 software](https://github.com/tmr4/T41_SDR/tree/dev/v0.1). The control app has the following features:
 
   * Live view of frequency and audio spectrums, S-meter, waterfall, and filter bandwidth
   * Live updates can be paused or started with the button at the lower left of the waterfall
@@ -28,5 +28,4 @@ The app communicates with T41 over USB (SerialUSB1 on Teensy, must select `Dual`
 
 ## Building the app
 
- I'm still determining the best way to make the app available.  You can build it using the community edition of {}
- I'm still determining the best way to make the app available.  In the meantime you can build it yourself using the community edition of [Visual Studio 2022 with C#](https://learn.microsoft.com/en-us/windows/apps/get-started/start-here?tabs=vs-2022-17-10).  Start a new project with the C# project template and copy this repository's files into the Views folder.  You'll likely need to load some packages (System.IO.Ports and Microsoft.Graphics.Win2D for example).  I'll update this after I do a clean install to test this approach.  Ultimately I'd like to make the packaged app available, but I need to do some research and testing for that.
+ I'm still determining the best way to make the app available.  In the meantime, you can build it yourself using the community edition of [Visual Studio 2022 with C#](https://learn.microsoft.com/en-us/windows/apps/get-started/start-here?tabs=vs-2022-17-10).  Start a new project with the C# project template and copy this repository's files into the Views folder.  You'll likely need to load some packages (System.IO.Ports and Microsoft.Graphics.Win2D for example).  I'll update this after I do a clean install to test this approach.  Ultimately I'd like to make the packaged app available, but I need to do some research and testing for that.
