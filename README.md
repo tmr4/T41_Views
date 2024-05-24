@@ -39,3 +39,25 @@ This is a work in progress and many T41 features are not available through the c
 My T41 software is required for the control app to function. The structure of the EEPROM is different from the original T41 software so a clean install is required.  Note that some T41 functionality may not work in my version probably because I made breaking changes and haven't tested things that don't interest me at the moment.  
 
 Unfortunately, a simple copy/paste port to version V049.2 isn't possible.  While the main T41 USB serial code is in a single file, there are other changes to the T41 code, and I've made many changes to my version which I utilize here.  Still, if you're interested in the app and are familiar with the T41 software, porting this to version V049.2 shouldn't be too difficult.
+
+## FAQs
+
+### Why not C++ instead of C#?
+
+I started out using C++ but had difficulties getting a few things to work.  Turns out C# is more fully supported in WinUI 3 than C++.
+
+### Why not .Net Maui instead of WinUI 3?
+
+I looked into .Net Maui at the start of this project because of it's multiple platform design.  However, it's controls were just enough different than the WinUI controls I was familiar with to require more work than I wanted to get this up and running.  Maui has more robust support in Visual Studio than WinUI, including hot reboot, but that wasn't enough to get me to switch.  Also it appeared at first glance all of the controls I needed/wanted weren't available in Maui.  Finally, I don't have a need for a multi-platform app.
+
+### Why not use V049.2 or T41EEE instead of your own T41 software version?
+
+Probably timing more than anything else.  It's still too early in development to have multiple people working on the same version of software without constantly having to deal with breaking changes.  I choose to spend my time on more productive efforts.  And off course there still isn't an official repository for V049.2.
+
+### Why not use Kenwood computer control commands instead of you own?
+
+You can probably see from the code that I started with a subset of Kenwood commands but after a while it seemed silly to continue with this when I didn't have an immediate need.  That said, it would take a much work to get many of the app's features working other radios using similar protocols.
+
+### Does the app use compressed data streams?
+
+No.  There isn't a large amount of data being transferred to the control app, mostly just the 512-byte frequency spectrum and ~270-byte audio spectrum every quarter second or so and much less going in the other direction.  I want to transfer audio for data modes as well, but even with that I don't think compression will be needed over the USB connection.  Also, the work required to compress the data might bog down the Teensy.  I'll see how it goes when I get there.
